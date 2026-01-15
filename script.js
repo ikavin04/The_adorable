@@ -159,45 +159,21 @@ function initContactForm() {
     if (!contactForm) return;
 
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         const submitBtn = this.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
         
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
 
-        const formData = new FormData(this);
-
-        fetch(this.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = 'linear-gradient(135deg, #a8d0d7, #d4a5a5)';
-            
-            this.reset();
-            showNotification('Thank you! Your message has been sent directly to our team.');
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 3000);
-        })
-        .catch(error => {
-            console.log('Error:', error);
-            submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to send';
-            submitBtn.style.background = '#ff6b6b';
-            showNotification('Sorry, there was an error. Please try again or contact us directly.');
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 3000);
-        });
+        showNotification('Your message is being sent...');
+        
+        // Reset button after 3 seconds in case FormSubmit redirect takes time
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+        
+        // The form will submit normally to FormSubmit.co
     });
     
     const formInputs = contactForm.querySelectorAll('input, select, textarea');
