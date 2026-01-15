@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - The Adorable</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="9a3eac75-d5f8-4699-969a-8ec5c8b1b817.jpg" alt="The Adorable" class="logo-image">
+                <h2>The Adorable</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products-header">
+        <div class="container">
+            <h1>Our Collections</h1>
+            <p>Premium accessories designed for the discerning professional woman</p>
+        </div>
+    </section>
+
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="hair">Hair Accessories</button>
+                <button class="filter-btn" data-category="earrings">Earrings</button>
+                <button class="filter-btn" data-category="bracelets">Bracelets</button>
+                <button class="filter-btn" data-category="rings">Rings</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_173950868_PORTRAIT.jpg" alt="Floral Korean Clip 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174017657_PORTRAIT.jpg" alt="Floral Korean Clip 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174003798_PORTRAIT.jpg" alt="Floral Korean Clip 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174031097_PORTRAIT.jpg" alt="Floral Korean Clip 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174043611_PORTRAIT.jpg" alt="Floral Korean Clip 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174057456_PORTRAIT.jpg" alt="Floral Korean Clip 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174110839_PORTRAIT.jpg" alt="Floral Korean Clip 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-barrette"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Floral Glossy Korean Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹30</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Floral Glossy Korean Clips', '₹30')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_174505537_PORTRAIT.jpg" alt="3-in-1 Floral Matte Hair Clip 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-crown"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174543494_PORTRAIT.jpg" alt="3-in-1 Floral Matte Hair Clip 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-crown"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174608418_PORTRAIT.jpg" alt="3-in-1 Floral Matte Hair Clip 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-crown"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174629885_PORTRAIT.jpg" alt="3-in-1 Floral Matte Hair Clip 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-crown"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174705048_PORTRAIT.jpg" alt="3-in-1 Floral Matte Hair Clip 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-crown"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_174912615_PORTRAIT.jpg" alt="3-in-1 Floral Matte Hair Clip 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-crown"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 1)"></span>
+                            <span class="dot" onclick="currentSlide(2, 1)"></span>
+                            <span class="dot" onclick="currentSlide(3, 1)"></span>
+                            <span class="dot" onclick="currentSlide(4, 1)"></span>
+                            <span class="dot" onclick="currentSlide(5, 1)"></span>
+                            <span class="dot" onclick="currentSlide(6, 1)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>3-in-1 Floral Matte Hair Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹65</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('3-in-1 Floral Matte Hair Clips', '₹65')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260113_220756788_PORTRAIT.jpg" alt="Minimalist Hair Pins 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-leaf"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260113_220905818_PORTRAIT.jpg" alt="Minimalist Hair Pins 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-leaf"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260113_220916111_PORTRAIT.jpg" alt="Minimalist Hair Pins 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-leaf"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260113_220932555_PORTRAIT.jpg" alt="Minimalist Hair Pins 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-leaf"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260113_220944265_PORTRAIT.jpg" alt="Minimalist Hair Pins 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-leaf"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260113_221012667_PORTRAIT.jpg" alt="Minimalist Hair Pins 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-leaf"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 2)"></span>
+                            <span class="dot" onclick="currentSlide(2, 2)"></span>
+                            <span class="dot" onclick="currentSlide(3, 2)"></span>
+                            <span class="dot" onclick="currentSlide(4, 2)"></span>
+                            <span class="dot" onclick="currentSlide(5, 2)"></span>
+                            <span class="dot" onclick="currentSlide(6, 2)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>2-in-1 Floral Gloss Hair Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹30</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('2-in-1 Floral Gloss Hair Clips', '₹30')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_183354880_PORTRAIT.jpg" alt="Bow Matte Hair Clips 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-ribbon"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_183404385_PORTRAIT.jpg" alt="Bow Matte Hair Clips 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-ribbon"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_183412282_PORTRAIT.jpg" alt="Bow Matte Hair Clips 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-ribbon"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_183420288_PORTRAIT.jpg" alt="Bow Matte Hair Clips 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-ribbon"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_183426921_PORTRAIT.jpg" alt="Bow Matte Hair Clips 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-ribbon"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_183434029_PORTRAIT.jpg" alt="Bow Matte Hair Clips 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-ribbon"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 3)"></span>
+                            <span class="dot" onclick="currentSlide(2, 3)"></span>
+                            <span class="dot" onclick="currentSlide(3, 3)"></span>
+                            <span class="dot" onclick="currentSlide(4, 3)"></span>
+                            <span class="dot" onclick="currentSlide(5, 3)"></span>
+                            <span class="dot" onclick="currentSlide(6, 3)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bow Matte Hair Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹20</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Bow Matte Hair Clips', '₹20')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_132040659_PORTRAIT.jpg" alt="Blotted Gloss Hair Clips 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-gem"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_132118619_PORTRAIT.jpg" alt="Blotted Gloss Hair Clips 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-gem"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_132151417_PORTRAIT.jpg" alt="Blotted Gloss Hair Clips 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-gem"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_132224611_PORTRAIT.jpg" alt="Blotted Gloss Hair Clips 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-gem"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_132309245_PORTRAIT.jpg" alt="Blotted Gloss Hair Clips 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-gem"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_132409579_PORTRAIT.jpg" alt="Blotted Gloss Hair Clips 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-gem"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 4)"></span>
+                            <span class="dot" onclick="currentSlide(2, 4)"></span>
+                            <span class="dot" onclick="currentSlide(3, 4)"></span>
+                            <span class="dot" onclick="currentSlide(4, 4)"></span>
+                            <span class="dot" onclick="currentSlide(5, 4)"></span>
+                            <span class="dot" onclick="currentSlide(6, 4)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Blotted Gloss Hair Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹25</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Blotted Gloss Hair Clips', '₹25')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/WhatsApp Image 2026-01-15 at 6.37.21 PM.jpeg" alt="Rose Matt Floral Hair Clips 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-rose"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/WhatsApp Image 2026-01-15 at 6.38.39 PM (1).jpeg" alt="Rose Matt Floral Hair Clips 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-rose"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/WhatsApp Image 2026-01-15 at 6.38.39 PM (2).jpeg" alt="Rose Matt Floral Hair Clips 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-rose"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/WhatsApp Image 2026-01-15 at 6.38.39 PM (3).jpeg" alt="Rose Matt Floral Hair Clips 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-rose"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/WhatsApp Image 2026-01-15 at 6.38.39 PM.jpeg" alt="Rose Matt Floral Hair Clips 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-rose"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/WhatsApp Image 2026-01-15 at 6.39.17 PM.jpeg" alt="Rose Matt Floral Hair Clips 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-rose"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 5)"></span>
+                            <span class="dot" onclick="currentSlide(2, 5)"></span>
+                            <span class="dot" onclick="currentSlide(3, 5)"></span>
+                            <span class="dot" onclick="currentSlide(4, 5)"></span>
+                            <span class="dot" onclick="currentSlide(5, 5)"></span>
+                            <span class="dot" onclick="currentSlide(6, 5)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Matt Floral Hair Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹20</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Rose Matt Floral Hair Clips', '₹20')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_185003035_PORTRAIT.jpg" alt="Mini Matte Design Clips 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paperclip"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_185343738_PORTRAIT.jpg" alt="Mini Matte Design Clips 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paperclip"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_185621988_PORTRAIT.jpg" alt="Mini Matte Design Clips 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paperclip"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 6)"></span>
+                            <span class="dot" onclick="currentSlide(2, 6)"></span>
+                            <span class="dot" onclick="currentSlide(3, 6)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mini Matte Design Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹7</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Mini Matte Design Clips', '₹7')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_190345888_PORTRAIT.jpg" alt="Long Matte Catch Hair Clip 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-grip-lines"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_190310047_PORTRAIT.jpg" alt="Long Matte Catch Hair Clip 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-grip-lines"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_190252785_PORTRAIT.jpg" alt="Long Matte Catch Hair Clip 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-grip-lines"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_190229291_PORTRAIT.jpg" alt="Long Matte Catch Hair Clip 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-grip-lines"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 7)"></span>
+                            <span class="dot" onclick="currentSlide(2, 7)"></span>
+                            <span class="dot" onclick="currentSlide(3, 7)"></span>
+                            <span class="dot" onclick="currentSlide(4, 7)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Long Matte Catch Hair Clip</h3>
+                        <div class="price">
+                            <span class="original-price">₹35</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Long Matte Catch Hair Clip', '₹35')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/WhatsApp Image 2026-01-15 at 7.05.14 PM.jpeg" alt="Butterfly Soft Hair Clips 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-butterfly"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/WhatsApp Image 2026-01-15 at 7.05.15 PM.jpeg" alt="Butterfly Soft Hair Clips 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-butterfly"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 8)"></span>
+                            <span class="dot" onclick="currentSlide(2, 8)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Butterfly Soft Hair Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹20</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Butterfly Soft Hair Clips', '₹20')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image slideshow-container">
+                        <div class="product-slideshow">
+                            <div class="slide active">
+                                <img src="images/IMG_20260115_191913592_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191740672_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191727686_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191706005_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191635581_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191600112_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191531019_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191438038_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 8" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191421044_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 9" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/IMG_20260115_191357240_PORTRAIT.jpg" alt="Korean Fur Hair Claw Clip 10" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="product-icon-fallback"><i class="fas fa-paw"></i></div>
+                            </div>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1, 9)"></span>
+                            <span class="dot" onclick="currentSlide(2, 9)"></span>
+                            <span class="dot" onclick="currentSlide(3, 9)"></span>
+                            <span class="dot" onclick="currentSlide(4, 9)"></span>
+                            <span class="dot" onclick="currentSlide(5, 9)"></span>
+                            <span class="dot" onclick="currentSlide(6, 9)"></span>
+                            <span class="dot" onclick="currentSlide(7, 9)"></span>
+                            <span class="dot" onclick="currentSlide(8, 9)"></span>
+                            <span class="dot" onclick="currentSlide(9, 9)"></span>
+                            <span class="dot" onclick="currentSlide(10, 9)"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Korean Fur Hair Claw Clip</h3>
+                        <div class="price">
+                            <span class="original-price">₹30</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Korean Fur Hair Claw Clip', '₹30')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hair">
+                    <div class="product-image">
+                        <img src="images/IMG_20260115_193102341_PORTRAIT.jpg" alt="Multicolour Mini Plastic Hair Claw Clips" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="product-icon-fallback" style="display: none;"><i class="fas fa-palette"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Multicolour Mini Plastic Hair Claw Clips</h3>
+                        <div class="price">
+                            <span class="original-price">₹10</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Multicolour Mini Plastic Hair Claw Clips', '₹10')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card coming-soon" data-category="earrings">
+                    <div class="product-image">
+                        <div class="product-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Earrings Collection</h3>
+                        <p class="product-description" style="font-size: 1.2rem; color: #8b7355; font-weight: 600;">Soon to be Launched</p>
+                    </div>
+                </div>
+
+                <div class="product-card coming-soon" data-category="bracelets">
+                    <div class="product-image">
+                        <div class="product-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bracelets Collection</h3>
+                        <p class="product-description" style="font-size: 1.2rem; color: #8b7355; font-weight: 600;">Soon to be Launched</p>
+                    </div>
+                </div>
+
+
+
+                <div class="product-card coming-soon" data-category="rings">
+                    <div class="product-image">
+                        <div class="product-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rings Collection</h3>
+                        <p class="product-description" style="font-size: 1.2rem; color: #8b7355; font-weight: 600;">Soon to be Launched</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total" id="cartTotal">Total: ₹0</div>
+                <button class="buy-now-btn" onclick="showContactOptions()" id="buyNowBtn" disabled>Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Options Modal -->
+    <div id="contactModal" class="contact-modal" style="display: none;">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h3>Choose Contact Method</h3>
+                <span class="contact-close" onclick="closeContactModal()">&times;</span>
+            </div>
+            <div class="contact-options">
+                <button class="contact-btn instagram-btn" onclick="contactViaInstagram()">
+                    <i class="fab fa-instagram"></i>
+                    Contact via Instagram
+                </button>
+                <button class="contact-btn whatsapp-btn" onclick="contactViaWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Adorable</h3>
+                    <p>Your destination for beautiful women's accessories. Express your unique style with our carefully curated collection.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fab fa-instagram"></i> @_the_adorable_</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 8778451386</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Adorable. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

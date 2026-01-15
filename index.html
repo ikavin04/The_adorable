@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Adorable - Women's Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="9a3eac75-d5f8-4699-969a-8ec5c8b1b817.jpg" alt="The Adorable" class="logo-image">
+                <h2>The Adorable</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-banner-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your Style</h1>
+                <p class="hero-description">Premium women's accessories designed for discerning customers. Our meticulously curated collection features sophisticated pieces that complement your professional and personal wardrobe.</p>
+                <a href="products.html" class="cta-button">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-banners">
+        <div class="container">
+            <div class="banner-grid">
+                <div class="promo-banner promo-banner-large">
+                    <div class="banner-image banner-hairclips"></div>
+                    <div class="banner-content">
+                        <h3>Shop Hair Clips</h3>
+                        <p>Explore our latest collection</p>
+                        <a href="products.html?category=hair" class="banner-link">View Collection →</a>
+                    </div>
+                </div>
+                <div class="promo-banner">
+                    <div class="banner-image banner-combos"></div>
+                    <div class="banner-content">
+                        <h3>The Combos</h3>
+                        <p>Elegant designs for every occasion</p>
+                        <a href="products.html?category=bracelets" class="banner-link">Discover More →</a>
+                    </div>
+                </div>
+                <div class="promo-banner promo-banner-more">
+                    <div class="banner-image banner-more"></div>
+                    <div class="banner-content banner-content-centered">
+                        <h3>More</h3>
+                        <a href="products.html" class="banner-link banner-link-large">→</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lifestyle-banner">
+        <div class="lifestyle-banner-image"></div>
+        <div class="lifestyle-overlay"></div>
+        <div class="lifestyle-content">
+            <h2>Elevate Your Everyday Elegance</h2>
+            <p>Discover accessories that seamlessly transition from boardroom to evening events</p>
+            <a href="about.html" class="secondary-button">Our Story</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose The Adorable?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Nationwide Delivery</h3>
+                    <p>Reliable shipping across India with secure, professional packaging and tracking</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Rigorously selected accessories featuring superior materials and craftsmanship</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Expert Curation</h3>
+                    <p>Each piece undergoes careful evaluation to meet our exacting standards of excellence</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Client-Focused Service</h3>
+                    <p>Professional consultation to ensure you select the ideal accessories for your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Adorable</h3>
+                    <p>Leading provider of premium women's accessories. We specialize in sophisticated pieces that enhance your professional and personal style through expert curation and exceptional service.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fab fa-instagram"></i> @_the_adorable_</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 8778451386</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Adorable. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total" id="cartTotal">Total: ₹0</div>
+                <button class="buy-now-btn" onclick="showContactOptions()" id="buyNowBtn" disabled>Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-actions" style="display: none;">
+                <button class="cart-btn" onclick="showContactOptions()">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Options Modal -->
+    <div id="contactModal" class="contact-modal" style="display: none;">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h3>Choose Contact Method</h3>
+                <span class="contact-close" onclick="closeContactModal()">&times;</span>
+            </div>
+            <div class="contact-options">
+                <button class="contact-btn instagram-btn" onclick="contactViaInstagram()">
+                    <i class="fab fa-instagram"></i>
+                    Contact via Instagram
+                </button>
+                <button class="contact-btn whatsapp-btn" onclick="contactViaWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

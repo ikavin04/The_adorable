@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Adorable</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, var(--soft-cream), var(--soft-sand));
+            text-align: center;
+        }
+        
+        .contact-page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-heading);
+        }
+        
+        .contact-page-header p {
+            font-size: 1.2rem;
+            color: var(--text-medium);
+        }
+        
+        .contact-main {
+            padding: 60px 0;
+            background: var(--white);
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .consultation-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+        }
+        
+        .consultation-section > p {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-method-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--soft-sand);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .method-icon-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-mocha), var(--accent-caramel));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .method-details h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-heading);
+        }
+        
+        .method-details p {
+            color: var(--text-medium);
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        .contact-link-btn {
+            color: var(--accent-mocha);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-link-btn:hover {
+            color: var(--text-dark);
+            text-decoration: underline;
+        }
+        
+        .inquiry-form-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-heading);
+            text-align: center;
+        }
+        
+        .inquiry-form-section > p {
+            color: var(--text-medium);
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .form-card {
+            background: linear-gradient(135deg, var(--soft-tan), var(--soft-beige));
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-field {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-field label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--soft-tan);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: var(--font-primary);
+            background: var(--white);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--accent-mocha);
+            box-shadow: 0 0 0 3px rgba(201, 184, 163, 0.1);
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, var(--accent-mocha), var(--accent-caramel));
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-card {
+                padding: 2rem;
+            }
+            
+            .contact-page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="9a3eac75-d5f8-4699-969a-8ec5c8b1b817.jpg" alt="The Adorable" class="logo-image">
+                <h2>The Adorable</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Professional consultation and client services for premium women's accessories</p>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="contact-container">
+            <div class="contact-layout">
+                <div class="consultation-section">
+                    <h2>Professional Consultation</h2>
+                    <p>Our experienced team provides expert guidance on product selection, styling recommendations, and custom requirements. We offer comprehensive support for wholesale inquiries, corporate orders, and individual client needs.</p>
+                    
+                    <div class="contact-method-card">
+                        <div class="method-icon-circle">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="method-details">
+                            <h3>Instagram Business Profile</h3>
+                            <p>Access our professional portfolio featuring product showcases, styling guides, and industry updates through our verified business account.</p>
+                            <a href="https://www.instagram.com/_the_adorable_?igsh=azlwa2ViNTFoMmVI" target="_blank" class="contact-link-btn">@_the_adorable_</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method-card">
+                        <div class="method-icon-circle">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="method-details">
+                            <h3>WhatsApp Business Line</h3>
+                            <p>Direct professional communication for order placement, product inquiries, and expedited customer service through our dedicated business messaging platform.</p>
+                            <a href="https://wa.me/918778451386" target="_blank" class="contact-link-btn">+91 8778451386</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inquiry-form-section">
+                    <h2>Professional Inquiry Form</h2>
+                    <p>Submit your detailed requirements and our team will provide comprehensive assistance within 24 hours.</p>
+                    
+                    <div class="form-card">
+                        <form id="contactForm" action="https://formsubmit.co/lakshmiprabha1804@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="New Inquiry from The Adorable Website">
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <div class="form-field">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="subject">What can we help you with?</label>
+                                <select id="subject" name="inquiry_type" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="Product Inquiry">Product Inquiry</option>
+                                    <option value="Order Status">Order Status</option>
+                                    <option value="Shipping Information">Shipping Information</option>
+                                    <option value="Returns & Exchanges">Returns & Exchanges</option>
+                                    <option value="Custom Request">Custom Request</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us more about what you're looking for or how we can help..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="9a3eac75-d5f8-4699-969a-8ec5c8b1b817.jpg" alt="The Adorable" class="footer-logo-image">
+                        <h3>The Adorable</h3>
+                    </div>
+                    <p>Premium women's accessories designed for discerning customers.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/_the_adorable_?igsh=azlwa2ViNTFoMmVI" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/918778451386" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Adorable. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-actions" style="display: none;">
+                <button class="cart-btn" onclick="showContactOptions()">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Options Modal -->
+    <div id="contactModal" class="contact-modal" style="display: none;">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h3>Choose Contact Method</h3>
+                <span class="contact-close" onclick="closeContactModal()">&times;</span>
+            </div>
+            <div class="contact-options">
+                <button class="contact-btn instagram-btn" onclick="contactViaInstagram()">
+                    <i class="fab fa-instagram"></i>
+                    Contact via Instagram
+                </button>
+                <button class="contact-btn whatsapp-btn" onclick="contactViaWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

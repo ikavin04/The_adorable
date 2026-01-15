@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - The Adorable</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="9a3eac75-d5f8-4699-969a-8ec5c8b1b817.jpg" alt="The Adorable" class="logo-image">
+                <h2>The Adorable</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-header">
+        <div class="container">
+            <h1>About The Adorable</h1>
+            <p>Excellence in women's accessories through expert curation and professional service</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Welcome to <strong>The Adorable</strong>- established and renowned for offering the finest ladies' accessories, including exquisite designs for the modern working woman. Built on the principles of excellence and expertise, The Adorable caters exclusively to the elite clientele that appreciates quality, originality, and elegance.</p>
+                    
+                    <p>The need for our firm opened up after carrying out a market study to find the requirement for high-quality accessories that can easily switch from the professional side to the non-professional side while being elegant enough to fulfill the objectives of today's professional woman.</p>
+                    
+                    <p>On the side of The Adorable, the curation of items involves rigorous testing of their qualities and designs. This assessment ensures that the items we select meet our stringent standards with respect to materials, design, and aesthetic value. The accessories we create include simple designs suitable for the office to those meant for formal functions depending on the preferences of our clients.</p>
+                </div>
+                <div class="about-image">
+                    <img src="9a3eac75-d5f8-4699-969a-8ec5c8b1b817.jpg" alt="The Adorable" class="story-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <h2 style="color: #8b7355;">Our Mission</h2>
+                <p>To provide exceptional women's accessories through professional service, expert curation, and nationwide distribution, enabling our clients to achieve sophisticated style with confidence and distinction.</p>
+                
+                <div class="mission-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Pan-India Distribution</h3>
+                        <p>Comprehensive shipping network ensuring reliable delivery of professionally packaged accessories to clients across India with tracking and insurance coverage.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Expert Curation</h3>
+                        <p>Systematic selection process employing experienced professionals to evaluate and approve each accessory based on quality, design, and market relevance.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Quality Assurance</h3>
+                        <p>Comprehensive quality control measures ensuring client satisfaction through rigorous testing and evaluation of all accessories before distribution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Accessory?</h2>
+                <p>Explore our beautiful collection and discover pieces that speak to your unique style.</p>
+                <a href="products.html" class="cta-button">Shop Our Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Adorable</h3>
+                    <p>Your destination for beautiful women's accessories. Express your unique style with our carefully curated collection.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fab fa-instagram"></i> @_the_adorable_</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 8778451386</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Adorable. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total" id="cartTotal">Total: ₹0</div>
+                <button class="buy-now-btn" onclick="showContactOptions()" id="buyNowBtn" disabled>Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-actions" style="display: none;">
+                <button class="cart-btn" onclick="showContactOptions()">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Options Modal -->
+    <div id="contactModal" class="contact-modal" style="display: none;">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h3>Choose Contact Method</h3>
+                <span class="contact-close" onclick="closeContactModal()">&times;</span>
+            </div>
+            <div class="contact-options">
+                <button class="contact-btn instagram-btn" onclick="contactViaInstagram()">
+                    <i class="fab fa-instagram"></i>
+                    Contact via Instagram
+                </button>
+                <button class="contact-btn whatsapp-btn" onclick="contactViaWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
